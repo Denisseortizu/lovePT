@@ -18,17 +18,19 @@ with open("love.txt", 'r', encoding="utf-8") as file:
 
 
 modelo = markovify.Text(textos, state_size=3)
-for _ in range(2):
+print(modelo.make_sentence(tries=100))
+
+"""for _ in range(2):
     print(modelo.make_sentence(tries=100))
     oraciones = []
     for _ in range(5):  
         oracion = modelo.make_sentence()
-        
+    
         if oracion:
             oraciones.append(oracion)
     paragraph = " ".join(oraciones)
     #print(paragraph)
-    #print("\n")
+    #print("\n")"""
 
 
 
